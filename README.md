@@ -26,7 +26,7 @@ I code mostly in the evenings. Day job: PVC manufacturing (EwelPlast, Brzeziny, 
 Weekends I shoot photos as **Leography**.
 I live with a cat (Simba, maine coon, 7 kg of living protest).
 
-I self-host everything I reasonably can. Cloudflare in front of everything. Unraid in the basement.
+I self-host everything I reasonably can. Cloudflare in front of everything. on infra I control end-to-end.
 
 ## ~/projects
 
@@ -42,9 +42,9 @@ I self-host everything I reasonably can. Cloudflare in front of everything. Unra
 ## ~/stack
 
 ```
-backend:    PHP 8 · Python · Node (when it must)
+backend:    PHP · Python · Node (when it must)
 frontend:   vanilla JS · CSS without frameworks · React (reluctantly, sometimes)
-infra:      Unraid · Docker · Cloudflare tunnel · Nginx
+infra:      self-managed infra · containerized · CDN-fronted
 db:         MySQL · SQLite · Postgres (when it gets serious)
 hosting:    self-hosted everything · Cloudflare in front
 tools:      VS Code · neovim · WSL · Obsidian
