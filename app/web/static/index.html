@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Allegro Arbitrage</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>allegro-arbitrage <span class="muted">// esej</span></h1>
+    <div id="auth-status" class="auth">…</div>
+  </header>
+
+  <nav>
+    <button data-tab="opportunities" class="active">Okazje</button>
+    <button data-tab="watchlists">Obserwowane</button>
+    <button data-tab="settings">Ustawienia</button>
+    <button data-tab="preview">Podgląd oferty</button>
+  </nav>
+
+  <main>
+    <section id="opportunities" class="tab active">
+      <div class="toolbar">
+        <label>Status:
+          <select id="opp-status">
+            <option value="">wszystkie</option>
+            <option value="new" selected>new</option>
+            <option value="seen">seen</option>
+            <option value="bought">bought</option>
+            <option value="listed">listed</option>
+            <option value="sold">sold</option>
+            <option value="dismissed">dismissed</option>
+          </select>
+        </label>
+        <button id="opp-refresh">Odśwież</button>
+      </div>
+      <table id="opp-table">
+        <thead>
+          <tr><th>ROI</th><th>Zysk netto</th><th>Kup za</th><th>Cena ref.</th>
+          <th>Produkt</th><th>Stan</th><th>Oferta</th><th>Status</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="watchlists" class="tab">
+      <form id="wl-form">
+        <input name="name" placeholder="Nazwa" required>
+        <input name="phrase" placeholder="Fraza (np. canon eos 200d)">
+        <input name="category_id" placeholder="ID kategorii">
+        <input name="price_from" type="number" step="0.01" placeholder="Cena od">
+        <input name="price_to" type="number" step="0.01" placeholder="Cena do">
+        <select name="condition">
+          <option value="all">dowolny stan</option>
+          <option value="new">nowy</option>
+          <option value="used">używany</option>
+        </select>
+        <button type="submit">Dodaj</button>
+      </form>
+      <table id="wl-table">
+        <thead><tr><th>Nazwa</th><th>Fraza</th><th>Kategoria</th><th>Stan</th>
+        <th>Ostatni skan</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="settings" class="tab">
+      <form id="settings-form"></form>
+      <button id="settings-save">Zapisz</button>
+    </section>
+
+    <section id="preview" class="tab">
+      <p class="muted">Podgląd opisu tak, jak wyrenderuje go Allegro (galeria + sekcje).</p>
+      <input id="pv-name" placeholder="Nazwa / tytuł oferty">
+      <textarea id="pv-images" placeholder="URL-e zdjęć, jeden na linię"></textarea>
+      <button id="pv-render">Renderuj podgląd</button>
+      <div id="pv-output" class="preview"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

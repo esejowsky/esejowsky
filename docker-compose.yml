@@ -1,0 +1,29 @@
+services:
+  web:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_PATH: /data/arbitrage.db
+    ports:
+      - "8000:8000"
+    volumes:
+      - arbitrage-data:/data
+
+  scheduler:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_PATH: /data/arbitrage.db
+      SCAN_INTERVAL: "1800"
+    volumes:
+      - arbitrage-data:/data
+    command: >
+      sh -c "python -m app.cli init-db &&
+             while true; do
+               python -m app.cli scan || true;
+               python -m app.cli reprice || true;
+               sleep ${SCAN_INTERVAL:-1800};
+             done"
+
+volumes:
+  arbitrage-data:

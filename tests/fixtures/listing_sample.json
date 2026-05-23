@@ -1,0 +1,77 @@
+{
+  "items": {
+    "promoted": [],
+    "regular": [
+      {
+        "id": "1001",
+        "name": "Canon EOS 200D body uzywany",
+        "sellingMode": {"price": {"amount": "1290.00", "currency": "PLN"}},
+        "delivery": {"lowestPrice": {"amount": "15.00", "currency": "PLN"}},
+        "productSet": [{"product": {"id": "100", "gtins": ["5901234123457"]}}],
+        "condition": "used",
+        "seller": {"id": "s1"},
+        "category": {"id": "260"}
+      },
+      {
+        "id": "1002",
+        "name": "Canon EOS 200D body uzywany",
+        "sellingMode": {"price": {"amount": "1300.00", "currency": "PLN"}},
+        "delivery": {"lowestPrice": {"amount": "15.00", "currency": "PLN"}},
+        "productSet": [{"product": {"id": "100", "gtins": ["5901234123457"]}}],
+        "condition": "used",
+        "seller": {"id": "s2"},
+        "category": {"id": "260"}
+      },
+      {
+        "id": "1003",
+        "name": "Canon EOS 200D body uzywany",
+        "sellingMode": {"price": {"amount": "1320.00", "currency": "PLN"}},
+        "delivery": {"lowestPrice": {"amount": "15.00", "currency": "PLN"}},
+        "productSet": [{"product": {"id": "100", "gtins": ["5901234123457"]}}],
+        "condition": "used",
+        "seller": {"id": "s3"},
+        "category": {"id": "260"}
+      },
+      {
+        "id": "1004",
+        "name": "Canon EOS 200D body uzywany",
+        "sellingMode": {"price": {"amount": "1310.00", "currency": "PLN"}},
+        "delivery": {"lowestPrice": {"amount": "15.00", "currency": "PLN"}},
+        "productSet": [{"product": {"id": "100", "gtins": ["5901234123457"]}}],
+        "condition": "used",
+        "seller": {"id": "s4"},
+        "category": {"id": "260"}
+      },
+      {
+        "id": "1005",
+        "name": "Canon EOS 200D body uzywany OKAZJA",
+        "sellingMode": {"price": {"amount": "700.00", "currency": "PLN"}},
+        "delivery": {"lowestPrice": {"amount": "15.00", "currency": "PLN"}},
+        "productSet": [{"product": {"id": "100", "gtins": ["5901234123457"]}}],
+        "condition": "used",
+        "seller": {"id": "s5"},
+        "category": {"id": "260"}
+      },
+      {
+        "id": "2001",
+        "name": "Inny produkt malo ofert",
+        "sellingMode": {"price": {"amount": "50.00", "currency": "PLN"}},
+        "delivery": {"lowestPrice": {"amount": "10.00", "currency": "PLN"}},
+        "productSet": [{"product": {"id": "200", "gtins": ["111"]}}],
+        "condition": "used",
+        "seller": {"id": "s6"},
+        "category": {"id": "261"}
+      },
+      {
+        "id": "2002",
+        "name": "Inny produkt malo ofert",
+        "sellingMode": {"price": {"amount": "500.00", "currency": "PLN"}},
+        "delivery": {"lowestPrice": {"amount": "10.00", "currency": "PLN"}},
+        "productSet": [{"product": {"id": "200", "gtins": ["111"]}}],
+        "condition": "used",
+        "seller": {"id": "s7"},
+        "category": {"id": "261"}
+      }
+    ]
+  }
+}

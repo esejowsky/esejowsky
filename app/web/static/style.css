@@ -1,0 +1,97 @@
+:root {
+  --bg: #0e0e12;
+  --panel: #16161d;
+  --fg: #e6e6ea;
+  --muted: #7a7a88;
+  --accent: #7c4dff;
+  --good: #35c46a;
+  --border: #26262f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 { font-size: 18px; margin: 0; }
+.muted { color: var(--muted); }
+
+.auth { font-size: 12px; }
+.auth a { color: var(--accent); }
+.auth.connected { color: var(--good); }
+
+nav {
+  display: flex;
+  gap: 4px;
+  padding: 8px 24px;
+  border-bottom: 1px solid var(--border);
+}
+nav button {
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+nav button.active { color: var(--fg); background: var(--panel); }
+
+main { padding: 24px; }
+.tab { display: none; }
+.tab.active { display: block; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: normal; }
+td.roi { color: var(--good); font-weight: bold; }
+
+.toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.secondary { background: var(--panel); color: var(--fg); border: 1px solid var(--border); }
+
+input, select, textarea {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+form { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+#settings-form { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 560px; }
+#settings-form label { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+
+textarea { width: 100%; min-height: 80px; }
+
+.preview {
+  margin-top: 16px;
+  padding: 16px;
+  background: white;
+  color: #111;
+  border-radius: 8px;
+  max-width: 720px;
+}
+.preview img { max-width: 100%; border-radius: 4px; margin: 8px 0; }
+
+a { color: var(--accent); }
