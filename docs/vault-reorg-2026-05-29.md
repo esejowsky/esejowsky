@@ -54,6 +54,15 @@ faktycznym oraz duplikacja instrukcji. Bałagan regenerował się (cron pisał d
 - Linter wyłapuje: pliki w roocie, brak frontmatter, zakazane foldery, aliasy ze ścieżką backupu,
   dziennik bez `tematy`.
 
+## Druga tura — weryfikacja całego vaultu
+- Osierocony indeks 32 GB `Esejowsky-archiwum/` (był w 03-ZASOBY) → `40-ARCHIWUM/`.
+- `github-templates/` z infra → zasoby; backupy/archiwalne honda → `40-ARCHIWUM/notatki/`.
+- Test-artefakt → kosz; stray komentarz → `firmy/`.
+- Nazwy Unicode (`αᴅєк`, `Pimp My Shoes`) → ASCII; `αᴅєк` była źle sklasyfikowana jako firma (to osoba) i miała martwy link — poprawione.
+- `tematy:` dobackfilowane do WSZYSTKICH dzienników 07–26 (+ nagłówki z tematami).
+- Naprawiony uszkodzony frontmatter w 2 dziennikach (brak pól / polskie klucze).
+- Audyt linków: 0 martwych linków po przenosinach.
+
 ## Follow-up (egzekwowane przez linter)
 - Backfill `tematy:` do starszych wpisów `05-DZIENNIK/` (07–26).
 - Normalizacja frontmatter/aliasów reszty plików z importu 2026-05-08 w `40-ARCHIWUM/`.
